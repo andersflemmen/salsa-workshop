@@ -57,3 +57,4 @@ jobs:
           image-ref: ttl.sh/${{ github.repository }}@${{ steps.build-push.outputs.digest }}
       - name: Attest image
         run: cosign attest --yes --predicate cyclone.sbom.json --type cyclonedx ttl.sh/${{ github.repository }}@${{ steps.build-push.outputs.digest }}
+
